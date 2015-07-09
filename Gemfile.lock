@@ -9,10 +9,10 @@ GIT
 
 GIT
   remote: git://github.com/projecthydra/active_fedora.git
-  revision: d11806b4f7e3aa69c2241a6d2b1a485fe00a6880
-  ref: d11806b4f7e3aa69c2241a6d2b1a485fe00a6880
+  revision: 6c6f3e9337076a8333eeb6eb46552315cf96264f
+  branch: master
   specs:
-    active-fedora (9.1.1)
+    active-fedora (9.2.0.rc2)
       active-triples (~> 0.7.1)
       activesupport (>= 4.1.0)
       deprecation

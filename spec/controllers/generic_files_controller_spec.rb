@@ -170,8 +170,8 @@ describe GenericFilesController do
       subject { generic_file.reload }
 
       it "should set the values using the parameters hash" do
-        expect(subject.aictags.first.content).to eql "tag1"
-        expect(subject.aictags.first.tagcats.first.pref_label).to eql "tagcat1"
+        expect(subject.aictags).to include(tag1)
+        expect(subject.aictags.first.tagcats).to include(tagcat1, tagcat2)
       end
     end
 
