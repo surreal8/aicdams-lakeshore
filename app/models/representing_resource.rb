@@ -1,9 +1,14 @@
 # frozen_string_literal: true
+# Tells us what CITI resources a given asset is representing.
 class RepresentingResource
+  extend Deprecation
   attr_reader :id
 
-  def initialize(id)
-    @id = id
+  # @param asset [String, GenericWork] the asset in question
+  def initialize(asset)
+    Deprecation.warn(RepresentingResource, 'RepresentingResource is deprecated use InboundRelationships instead')
+    return unless asset
+    @id = asset.is_a?(String) ? asset : asset.id
   end
 
   def representing?
